@@ -29,9 +29,9 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[CONTRIBUTING.md Code of Conduct](blob/master/CODE_OF_CONDUCT.md).
+[CONTRIBUTING.md Code of Conduct](/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
-to <>.
+to Daniel the project maintainer.
 
 
 ## I Have a Question

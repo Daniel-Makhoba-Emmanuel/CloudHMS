@@ -13,5 +13,5 @@ resource "azurerm_resource_group" "GlobalRG" {
 }
 
 ######## Azure Service Bus ##########
-#did it break5 pub
+#did it break5 pub2
 

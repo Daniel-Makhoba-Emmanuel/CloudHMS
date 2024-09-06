@@ -1,0 +1,6 @@
+secrets.txt
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate*
+*.code-workspace
+

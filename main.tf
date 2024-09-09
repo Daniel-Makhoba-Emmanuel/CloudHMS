@@ -1,17 +1,15 @@
+######## Department Modules ##########
 
-resource "random_integer" "sbns_suffix" {
-  min = 100000
-  max = 999999
+
+
+module "Finance" {
+  source = "./Departments/Finance"
 }
 
-######## Resource Groups ##########
-
-
-resource "azurerm_resource_group" "GlobalRG" {
-  name = "${var.CHMS_RG_name}-RG"
-  location = var.infra_location
+module "Hr" {
+  source = "./Departments/Hr"
 }
 
-######## Azure Service Bus ##########
-#did it break5 pub2
-
+module "Inventory" {
+  source = "./Departments/Inventory"
+}

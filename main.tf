@@ -13,3 +13,7 @@ module "Hr" {
 module "Inventory" {
   source = "./Departments/Inventory"
 }
+
+module "Global" {
+  source = "./Departments/Global"
+}

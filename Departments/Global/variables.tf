@@ -1,4 +1,4 @@
-variable "Dept_RG_name" {
+variable "prefix" {
     type = string
     default = "Global"
     description = "This is the name for the RG for Global Resources(non-departmental)"

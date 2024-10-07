@@ -26,8 +26,8 @@ resource "azurerm_consumption_budget_resource_group" "Inventory-Budget" {
   amount = 15
   time_grain = "Monthly"
   time_period {
-    start_date = "2024-09-01T00:00:00Z"
-    end_date =   "2024-10-01T00:00:00Z"
+    start_date = "2024-10-01T00:00:00Z"
+    end_date =   "2024-11-01T00:00:00Z"
   }
   notification {
     enabled = true

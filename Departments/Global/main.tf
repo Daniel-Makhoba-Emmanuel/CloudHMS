@@ -1,12 +1,18 @@
+# Generate a random integer between 100000 and 999999 for the storage account suffix
+
 resource "random_integer" "redis_suffix" {
   min = 100000
   max = 999999
 }
+
+# Create a resource group for global  resources in the specified location
+
 resource "azurerm_resource_group" "GlobalRG" {
   name = "${var.prefix}-RG"
   location = var.infra_location
 }
 
+#creates azure redis cashe for circuit breaker Logic
 resource "azurerm_redis_cache" "Global-redis" {
   name = "${lower(var.prefix)}-redis${random_integer.redis_suffix.result}"
   resource_group_name = azurerm_resource_group.GlobalRG.name
@@ -16,6 +22,7 @@ resource "azurerm_redis_cache" "Global-redis" {
   family = "C"
 }
 
+#creates the global virtual network for filtering and directing traffic and its subnet's
 resource "azurerm_virtual_network" "Global-vnet" {
   name = "${var.prefix}-vnet"
   location = azurerm_resource_group.GlobalRG.location
